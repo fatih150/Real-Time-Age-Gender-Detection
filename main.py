@@ -59,7 +59,8 @@ while True:
         label="{},{}".format(gender, age)
         cv2.putText(frame, label, (bbox[0], bbox[1]-10), cv2.FONT_HERSHEY_PLAIN, 0.8, (255,255,255), 2)
 
-    # frame=cv2.flip(frame, 1) --> bu kod ayna görüntüsü sorununu halleder fakat yaş ve cinsiyetin yazılı olduğu textbox metnini tersten yazdırır.
+    # frame=cv2.flip(frame, 1) --> Bu kod ayna görüntüsü sorununu halleder fakat yaş ve cinsiyetin yazılı olduğu textbox metnini tersten yazdırır.
+    #                          --> This code solves the mirror image problem, but prints the text of the textbox containing the age and gender in reverse.
     cv2.imshow("Age-Gender", frame)
     k=cv2.waitKey(1)
     if k==ord('q'):
